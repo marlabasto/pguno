@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+  <script>
+  function capturar() {
+        var respuesta = document.getElementById("nombre").value;
+        var intentos = 3;
+        if (respuesta == "aguja") {
+            document.getElementById("resultado").innerHTML = " \
+            <br>Correctou!";
+        }
+        else {
+            document.getElementById("resultado").innerHTML = " \
+            <br>Tu respuesta no es correcta." + " Te quedan " + intentos + " intentos.";
+            
+        }
+    }
+  </script>
+</head>
+
+<body>
+    <h1>Adivinanza</h1>
+        Tiene un ojo y no puede ver<br><input type="text" id="nombre">
+  
+    <input type="submit" value="Responder" onclick=capturar()>
+    <div id="resultado"></div>
+</body>
+
+</html>
